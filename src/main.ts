@@ -6,6 +6,8 @@ const root = document.querySelector('my-app') || undefined;
 const Projector = ProjectorMixin(App);
 const projector = new Projector();
 
-projector.append(root).then(() => {
-	console.log('Attached!');
-});
+if (root) {
+	projector.append(root).then(() => {
+		console.log('Attached!');
+	});
+}
